@@ -1,4 +1,4 @@
-from alpine:3.17
-run apk add --update rsync openssh-server && rsync --version
+from alpine:3.19.1
+run apk add --no-cache rsync openssh
 entrypoint ["/entrypoint.sh"]
 copy entrypoint.sh /
